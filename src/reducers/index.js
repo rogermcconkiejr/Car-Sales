@@ -1,5 +1,3 @@
-import { useReducer } from "react";
-
 const initialState = {
     additionalPrice: 0,
     car: {
