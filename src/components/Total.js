@@ -11,6 +11,7 @@ const Total = props => {
 };
 
 const mapStateToProps = state => {
+  console.log('Total mSTP:', state);
   return {
     
   }

@@ -22,8 +22,9 @@ const AddedFeatures = props => {
 };
 
 const mapStateToProps = state => {
+  console.log('Added Features mSTP:', state);
   return {
-    
+
   }
 }
 export default connect(mapStateToProps, {})(AddedFeatures);
