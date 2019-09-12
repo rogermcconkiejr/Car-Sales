@@ -25,13 +25,21 @@ export const originalReducer = (state = initialState, action)=> {
         case ADD_FEATURE:
             return {
                 ...state,
-                // Changes to state here.
+                car: {...state.car,
+                features: state.car.features.concat(action.payload)
+            },
             }
-        case REMOVE_FEATURE:
-            return {
+            case REMOVE_FEATURE:
+            console.log('removedFeature',action.payload)
+            return{
                 ...state,
-                //Changes go here
-            }
+                additionalPrice:state.additionalPrice - action.payload.price,
+                car:{ ...state.car,
+                    features: state.car.features.filter( item =>
+                   item.id !== action.payload.id
+                )},
+                store:[...state.store, action.payload]
+        }
         case UPDATE_TOTAL:
             return {
                 ...state,
